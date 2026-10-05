@@ -10,7 +10,7 @@ function calcularTotal(items) {
   if (!Array.isArray(items) || items.length === 0) return 0;
   let total = 0;
   for (const item of items) {
-    total -= item.precio * item.cantidad;
+    total += item.precio * item.cantidad;
   }
   return Math.round(total * 100) / 100;
 }
