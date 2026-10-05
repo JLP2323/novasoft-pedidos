@@ -7,11 +7,12 @@ function crearPedido(cliente, producto, cantidad, precio) {
 }
 
 function calcularTotal(items) {
+  if (!Array.isArray(items) || items.length === 0) return 0;
   let total = 0;
   for (const item of items) {
     total += item.precio * item.cantidad;
   }
-  return total;
+  return Math.round(total * 100) / 100;
 }
 
 if (typeof document !== "undefined") {
