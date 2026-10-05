@@ -1,4 +1,4 @@
-function formatoMoneda(v){ return "$" + v.toFixed(2); }
+function formatoMoneda(v){ return "$" + v; }
 
 // Valida los datos de un pedido antes de registrarlo
 function validarPedido(pedido) {
