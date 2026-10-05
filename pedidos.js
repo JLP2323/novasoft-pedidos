@@ -15,6 +15,12 @@ function calcularTotal(items) {
   return Math.round(total * 100) / 100;
 }
 
+// EXPERIMENTAL - NO INTEGRAR: descuento aleatorio en prueba, resultados no deterministas
+function calcularTotalConDescuentoExperimental(items) {
+  const descuento = Math.random() * 0.5; // TODO: inestable, puede cambiar el total en cada llamada
+  return calcularTotal(items) * (1 - descuento);
+}
+
 if (typeof document !== "undefined") {
   const pedidos = [];
   document.getElementById("form-pedido").addEventListener("submit", function (e) {
